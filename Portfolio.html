@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width-device-width,initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/db6613517e.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="logo.jpeg" class="logo">
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    
+                    <i class="fas fa-times" onclick="clodemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu"></i>
+
+            </nav>
+            <div class="header-text">
+                <p>Web Developer</p>
+                <h1>Hi, I'm <span>Soha</span> From India</h1>
+            </div>
+        </div>
+    </div>
+    
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                
+                <div class="about-col-2">
+                    <h1 class="subtitle">About me</h1>
+                    <P> I'm Soha Shaik, a passionate and creative Full Stack developer with a knack for turning ideas into reality through elegant and functional websites.
+                        I specialize in front-end and back-end development, creating seamless, responsive, and user-friendly web experiences.I am passionate about leveraging technology to create impactful solutions and am continuously seeking opportunities to expand my skill set and contribute to meaningful projects. Let's connect and explore how I can help bring your ideas to life!
+
+                    </P>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                        <p class="tab-links" onclick="opentab('projects')">Projects</p>
+                        <p class="tab-links" onclick="opentab('Internships')">Internships</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Full Stack Development</span></li>
+                            <li><span>Problem Solving</span></li>
+                            <li><span>Back-end Development</span></li>
+                            <li><span>Django</span></li>
+                            <li><span>Flutter</span></li>
+                            <li><span>Firebase</span></li>
+                            <li><span>Flutterflow</span></li>
+                            <li><span>Android Development</span></li>
+                            <li><span>Data Structures and Algorithms</span></li>
+                            <li><span>Communication Skills</span></li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2022-26</span><br>Btech in CSE with specialization in AI  ML From VITAP</li>
+                
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="projects">
+                        <ul>
+                            <li><span>DataVisualizer</span><br>This project addresses the critical issue of the lack of
+                                 easily accessible and visually informative information about common diseases and their 
+                                 regional prevalence. Data Visualizer aims to provide a comprehensive and visually intuitive 
+                                 resource that empowers individuals with the knowledge needed to make informed decisions about
+                                  public health.
+                                <br>GitHub: <a href="https://github.com/SohaSk/DataVisualizer">Github Link of Project</a></li>
+                            <li><span>TaskCrafter</span><br>
+                                A project management mobile application developed using Flutter.
+                                Features include project and task management, user roles, notifications, and file sharing.
+                                While working on this project I have learnt how to integrate firebase for authentication, storage and retreival.
+                                <br>GitHub: <a href="https://github.com/milestone-club/task_crafter_app">Github Link of Project</a></li> 
+                            
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="Internships">
+                        <ul>
+                            <li><span>Full Stack Development at HONEYFILM Production And Advertising (Internship, Jun 2024 - Present)
+                            </span><br>Developing a mobile application using Flutterflow with a team of 4 members.
+                            Gained experience in developing applications using Flutterflow without explicitly writing code.            
+                            <br></li>
+                            <li><span>Web Development at Bharat Intern (Internship, Jan 2024 - Feb 2024)
+                            </span><br>
+                            Developed a mini portfolio website and a Netflix clone using HTML, CSS, and JavaScript.
+                            Utilized API for the Netflix clone.                            
+                            <br>GitHub: <a href="https://github.com/SohaSk/BharatIntern-Tasks">Github Link of Project</a></li> 
+                            
+                        </ul>
+                    </div>
+                    
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div id="contact">
+        <div class="container">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p>sohashaik2005@gmail.com</p>
+                <p>7997005084</p>
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/shaik-soha-62459b18a/"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://github.com/SohaSk"><i class="fa-brands fa-github"></i></a>
+                </div>
+            </div>
+            <div class="contact-right">
+                <form>
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Copyright © Soha.</p>
+
+        </div>
+    </div>
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove('active-link');
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove('active-tab');
+            }
+            event.currentTarget.classList.add('active-link');
+            document.getElementById(tabname).classList.add("active-tab");
+
+        }
+
+
+    </script>
+    <script>
+        var sidemenu=document.getElementById('sidemenu');
+        function openmenu(){
+            sidemenu.style.right="0";
+        }
+        function closemenu(){
+            sidemenu.style.right="-200px";
+        }
+    </script>
+</body>
+</html>
